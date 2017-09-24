@@ -57,7 +57,9 @@ const translations = {
             "release": "Version OS"
         }
     },
-    "system" : "Système"
+    "system" : "Système",
+    "hash" : "Hash",
+    "lastBlocks" : "Derniers blocks"
 };
 
 

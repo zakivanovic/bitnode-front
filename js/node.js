@@ -1,29 +1,13 @@
 var nodeData;
 $(document).ready(function () {
 
-    $.mockjax({
-        url: "/api/node",
-        responseText: nodeModel /* ./model/nodeModel.js */
-    });
+    fetchNodeData();
 
-
-    $.ajax({
-        url: '/api/node',
-        type: 'GET',
-        dataType: 'json',
-        success: function (data) {
-            nodeData = data;
-            updateView(nodeData);
-            console.log(tab);
-        },
-        error: function (data) {
-            alert('Error fetching node data!');
-        }
-    });
+    setInterval(fetchNodeData, 10000); // refreshes data every 10 seconds
 });
 
 const viewPartial = {
-    'node' : ["versions.node", "versions.protocol", "versions.wallet", "versions.userAgent", "errors", "mempool.size", "mempool.usage", "mempool.max", "mempool.fee", "disk.path","memory.used", "memory.free", "memory.total"],
+    'node' : ["versions.node", "versions.protocol", "versions.wallet", "versions.userAgent", "errors", "mempool.size", "mempool.usage", "mempool.max", "mempool.fee", "disk.path","memory.used", "memory.free", "memory.total", "uptime"],
     'network' : ["connections", "difficulty", "proxy", "hashrate", "network", "block", "medianTime",  "pruned"],
     'system' : ["sys.hostname", "sys.cpus", "sys.uptime", "sys.os.platform", "sys.os.arch", "sys.os.release"],
     'sync' : ["verificationProgress","height", "timeOffset"],
@@ -34,13 +18,32 @@ const progressBars = []
 var tab = [];
 
 /**
+ * fetches node data
+ */
+function fetchNodeData() {
+    $.ajax({
+        url: '/api/node',
+        type: 'GET',
+        dataType: 'json',
+        success: function (data) {
+            nodeData = data;
+            emptyContainers()
+            updateView(nodeData);
+        },
+        error: function (response) {
+            alert('Error fetching node data : ['+ response.status +'] ' + response.statusText);
+        }
+    });
+}
+
+/**
  * updates html view with json data
- * @param {object} data 
+ * @param {object} data
+ * @param {string} parent
  */
 function updateView(data, parent = "") {
-    
+
     for (var key in data) {
-        
         if (data.hasOwnProperty(key)) {
             var fullKey = ((parent != '')?(parent+'.'):('')) + key;
             if(typeof data[key] === 'object') {
@@ -60,7 +63,8 @@ function updateView(data, parent = "") {
 function appendHtml(data, fullKey) {
 
     if(fullKey == 'verificationProgress') {
-        data = getProgressBarHtml(data*100, (data*100)+' %');
+        var percent = Math.round(data*100);
+        data = getProgressBarHtml(percent, percent + ' %');
     }
     if(fullKey == 'memory.used') {
         data = getProgressBarHtml((data/nodeData.memory.total * 100), data + '/' + nodeData.memory.total);
@@ -76,8 +80,7 @@ function appendHtml(data, fullKey) {
 }
 
 /**
- * getRowHtml
- * @param {*} data 
+ * getContainerName
  * @param {*} fullKey 
  */
 function getContainerName(fullKey) {
@@ -92,9 +95,20 @@ function getContainerName(fullKey) {
 }
 
 /**
- * getRowHtml
- * @param {*} data 
- * @param {*} fullKey 
+ * empty containers html
+ */
+function emptyContainers() {
+    for (var key in viewPartial) {
+        if (viewPartial.hasOwnProperty(key)) {
+            $('#' + key + '-container div').remove();
+        }
+    }
+}
+
+/**
+ * getProgressBarHtml
+ * @param {*} value 
+ * @param {*} text 
  */
 function getProgressBarHtml(value, text) {
     var html = '\
