@@ -3,7 +3,7 @@ $(document).ready(function () {
 
     fetchNodeData();
 
-    setInterval(fetchNodeData, 10000); // refreshes data every 10 seconds
+    intervals.push(setInterval(fetchNodeData, 10000)); // refreshes data every 10 seconds
 });
 
 const viewPartial = {
@@ -31,7 +31,7 @@ function fetchNodeData() {
             updateView(nodeData);
         },
         error: function (response) {
-            alert('Error fetching node data : ['+ response.status +'] ' + response.statusText);
+            toastr.error('Error fetching node data : ['+ response.status +'] ' + response.statusText)
         }
     });
 }

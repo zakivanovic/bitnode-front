@@ -12,9 +12,10 @@
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/toastr/toastr.min.css" rel="stylesheet"/>
 
   <!-- Custom styles for this template -->
-  <link href="css/2-col-portfolio.css" rel="stylesheet">
+  <link href="css/_global.css" rel="stylesheet">
 
 </head>
 
@@ -23,40 +24,7 @@
   <div id="navbar"><!-- ../common/navbar.html --></div>
 
   <!-- Page Content -->
-  <div class="container">
-    <h1 class="my-4">Bitnode 
-        <small>info</small>
-      </h1>
-    <div class="row">
-      <div class="col-lg-6 portfolio-item">
-        <div class="card h-100">
-          <div id="sync-container" class="card-body">
-            <h2 class="my-4">Synchronisation</h2>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6 portfolio-item">
-        <div class="card h-100">
-          <div id="network-container" class="card-body">
-            <h2 class="my-4">Réseau</h2>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6 portfolio-item">
-        <div class="card h-100">
-          <div id="node-container" class="card-body">
-            <h2 class="my-4">Nœud</h2>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6 portfolio-item">
-        <div class="card h-100">
-          <div id="system-container" class="card-body">
-            <h2 class="my-4">Système</h2>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div id="main" class="container"></div>
     <!-- /.container -->
 
     <!-- Footer -->
@@ -64,13 +32,13 @@
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/sammy.min.js"></script>
     <script src="vendor/popper/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script>var currentPage = 'node';</script>
-    <script src="js/common.js"></script>
-    <script src="js/node.js"></script>
-    <script src="js/models/nodeModel.js"></script>
+    <script src="vendor/toastr/toastr.min.js"></script>
     <script src="js/i18n/fr_FR.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/common.js"></script>
 
 </body>
 

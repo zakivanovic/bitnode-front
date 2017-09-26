@@ -5,7 +5,7 @@ $(document).ready(function () {
 
     fetchExplorerData();
 
-    setInterval(fetchExplorerData, 10000); // refreshes data every 10 seconds
+    intervals.push(setInterval(fetchExplorerData, 10000)); // refreshes data every 10 seconds
 });
 
 /**
@@ -22,7 +22,7 @@ function fetchExplorerData() {
             updateView(explorerData);
         },
         error: function (response) {
-            alert('Error fetching explorer data : ['+ response.status +'] ' + response.statusText);
+            toastr.error('Error fetching explorer data : ['+ response.status +'] ' + response.statusText)
         }
     });
 }
@@ -38,7 +38,7 @@ function updateView(data) {
         <div class="col-lg-8">'+ i18n('hash') +'</div>\
     </div>\
     <div class="row">\
-        <div class="col-lg-4"><a href="/explorer/node/'+data.height+'">'+ data.height +'</a></div>\
-        <div class="col-lg-8"><a href="/explorer/node/'+data.hash+'">'+ data.hash +'</a></div>\
+        <div class="col-lg-4"><a href="#/explorer/block/'+data.height+'">'+ data.height +'</a></div>\
+        <div class="col-lg-8"><a href="#/explorer/block/'+data.hash+'">'+ data.hash +'</a></div>\
     </div>');
 }
