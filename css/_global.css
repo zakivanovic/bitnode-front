@@ -24,3 +24,8 @@ body {
 .right {
   text-align: right;
 }
+
+#block {
+  font-size: 14px;
+  max-width: 1140px;
+}
