@@ -29,3 +29,16 @@ body {
   font-size: 14px;
   max-width: 1140px;
 }
+
+#block div.right {
+  font-size: 12px;
+}
+
+#block span.badge {
+  font-weight: inherit;
+}
+
+.border-top {
+  border-top: 1px solid lightgray;
+  padding: 10px 0px;
+}

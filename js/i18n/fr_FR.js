@@ -61,7 +61,8 @@ const translations = {
     "hash" : "Hash",
     "lastBlocks" : "Derniers blocs",
     "blockInfo" : "Résumé du bloc",
-    "tx" : "Transactions"
+    "tx" : "Transactions",
+    "tx-count" : "Nbr. transactions"
 };
 
 
