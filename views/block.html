@@ -3,7 +3,7 @@
 <div id="block" class="card-body row">
     <div class="col-md-3">
         <div class="row">
-            <div class="col-md-6 left">Height</div>
+            <div id="block-height-lbl" class="col-md-6 left">Height</div>
             <div id="block-height" class="col-md-6 right"></div>
         </div>
         <div class="row">
@@ -15,8 +15,8 @@
             <div class="col-md-6 right"><span id="block-size"></span> <span class="text-muted">Bytes</span> </div>
         </div>
         <div class="row">
-            <div class="col-md-7 left">Nombre de transactions</div>
-            <div id="block-tx-count" class="col-md-5 right"></div>
+            <div class="col-md-9 left">Nombre de transactions</div>
+            <div id="block-tx-count" class="col-md-3 right"></div>
         </div>
         <div class="row">
             <div class="col-md-6 left">Nonce</div>
@@ -30,37 +30,45 @@
             <div class="col-md-6 left">Version</div>
             <div id="block-version" class="col-md-6 right"></div>
         </div>
-    </div>
-    <div class="col-md-8">
         <div class="row">
-            <div class="col-md-2 left">Bits</div>
-            <div id="block-bits" class="col-md-6 right"></div>
+            <div id="block-time-lbl" class="col-md-6 left">Heure</div>
+            <div id="block-time" class="col-md-6 right"></div>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div class="row">
+            <div class="col-md-3 left">Bits</div>
+            <div id="block-bits" class="col-md-9 right"></div>
         </div>
         <div class="row">
             <div class="col-md-3 left">Coinbase</div>
-            <div id="block-coinbase" class="col-md-6 right"></div>
+            <div id="block-coinbase" class="col-md-9 right"></div>
         </div>
         <div class="row">
             <div class="col-md-3 left">Difficulté</div>
-            <div id="block-difficulty" class="col-md-6 right"></div>
+            <div id="block-difficulty" class="col-md-9 right"></div>
         </div>
         <div class="row">
             <div class="col-md-3 left">Hash du block</div>
-            <div id="block-hash" class="col-md-6 right"></div>
+            <div id="block-hash" class="col-md-9 right"></div>
         </div>
         <div class="row">
-            <div class="col-md-3 left">Block précedent</div>
-            <div id="block-previous" class="col-md-6 right"></div>
+            <div class="col-sm-3 left">Block précedent</div>
+            <div id="block-previous" class="col-md-9 right"></div>
         </div>
         <div class="row">
             <div class="col-md-3 left">Block suivant</div>
-            <div id="block-next" class="col-md-6 right"></div>
+            <div id="block-next" class="col-md-9 right"></div>
         </div>
         <div class="row">
             <div class="col-md-3 left">MerkleRoot</div>
-            <div id="block-merkleRoot" class="col-md-6 right"></div>
+            <div id="block-merkleRoot" class="col-md-9 right"></div>
         </div>
     </div>
+</div>
+
+<div id="tx" class="card-body row">
+    <h2 id="tx-title" class="my-4">Transactions</h2>
 </div>
 
 <script src="js/block.js"></script>

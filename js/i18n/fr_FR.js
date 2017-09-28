@@ -59,7 +59,9 @@ const translations = {
     },
     "system" : "Système",
     "hash" : "Hash",
-    "lastBlocks" : "Derniers blocks"
+    "lastBlocks" : "Derniers blocs",
+    "blockInfo" : "Résumé du bloc",
+    "tx" : "Transactions"
 };
 
 

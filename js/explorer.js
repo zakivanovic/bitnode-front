@@ -20,6 +20,7 @@ function fetchExplorerData() {
             explorerData = data;
             $('#block-list div').remove()
             updateView(explorerData);
+            $('body').addClass('loaded');
         },
         error: function (response) {
             toastr.error('Error fetching explorer data : ['+ response.status +'] ' + response.statusText)

@@ -44,6 +44,7 @@ $(document).ready(function ()
 });
 
 function resetIntervals(intervals) {
+    $('body').removeClass('loaded');
     intervals.forEach(function(interval) {
         clearInterval(interval);
     }, this);

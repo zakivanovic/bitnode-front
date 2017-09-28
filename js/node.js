@@ -1,6 +1,8 @@
 var nodeData;
 $(document).ready(function () {
 
+    console.log('nodeData');
+
     fetchNodeData();
 
     intervals.push(setInterval(fetchNodeData, 10000)); // refreshes data every 10 seconds
@@ -29,6 +31,7 @@ function fetchNodeData() {
             nodeData = data;
             emptyContainers()
             updateView(nodeData);
+            $('body').addClass('loaded');
         },
         error: function (response) {
             toastr.error('Error fetching node data : ['+ response.status +'] ' + response.statusText)
