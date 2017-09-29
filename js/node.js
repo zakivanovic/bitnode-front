@@ -1,10 +1,6 @@
 var nodeData;
 $(document).ready(function () {
-
-    console.log('nodeData');
-
     fetchNodeData();
-
     intervals.push(setInterval(fetchNodeData, 10000)); // refreshes data every 10 seconds
 });
 

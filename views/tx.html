@@ -1,0 +1,54 @@
+
+<div class="row breadcrumb">
+    <a href="#/explorer">Explorer</a> &nbsp; / &nbsp;<span id="tx-block"></span>&nbsp; / &nbsp;<span id="tx-hash"></span>
+</div>
+<h1 id="title" class="my-4"></h1>
+<div class="card card-outline-warning">
+    <div id="tx" class="card-body row info-container">
+        <div class="col">
+            <div class="row">
+                <div id="tx-coinbase-lbl" class="col left">coinbase</div>
+                <div id="tx-coinbase" class="col right"></div>
+            </div>
+            <div class="row">
+                <div id="tx-confirmations-lbl" class="col left">confirmations</div>
+                <div id="tx-confirmations" class="col right"></div>
+            </div>
+            <div class="row">
+                <div id="tx-fee-lbl" class="col left">fee</div>
+                <div class="col right"><span id="tx-fee"></span> <span class="text-muted">BTC</span></div>
+            </div>
+            <div class="row">
+                <div id="tx-value-lbl" class="col left">value</div>
+                <div class="col right"><span id="tx-value"></span> <span class="text-muted">BTC</span></div>
+            </div>
+            
+        </div>
+        <div class="col">
+            <div class="row">
+                <div id="tx-size-lbl" class="col left">size</div>
+                <div class="col right"><span id="tx-size"></span> <span class="text-muted">Bytes</span></div>
+            </div>
+            <div class="row">
+                <div id="tx-time-lbl" class="col-4 left">time</div>
+                <div id="tx-time" class="col-8 right"></div>
+            </div>
+            <div class="row">
+                <div id="tx-version-lbl" class="col left">version</div>
+                <div id="tx-version" class="col right"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2 id="tx-title" class="my-4"></h2>
+
+<div id="chain" class="card card-outline-warning">
+    <div class="row">
+        <div id="tx-inputs" class="col-5"></div>
+        <div class="col-1">--></div>
+        <div id="tx-outputs" class="col-6"></div>
+    </div>
+</div>
+
+<script src="js/tx.js"></script>

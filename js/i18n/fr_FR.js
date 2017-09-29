@@ -58,11 +58,25 @@ const translations = {
         }
     },
     "system" : "Système",
-    "hash" : "Hash",
-    "lastBlocks" : "Derniers blocs",
-    "blockInfo" : "Résumé du bloc",
+    "hash" : "Hash : ",
+    "lastBlocks" : "Derniers blocks",
+    "blockInfo" : "Résumé du block",
     "tx" : "Transactions",
-    "tx-count" : "Nbr. transactions"
+    "tx-count" : "Nbr. transactions : ",
+    "time" : "Heure : ",
+    "coinbase" : "Coinbase : ",
+    "confirmations" : "Confirmations : ",
+    "fee" : "Frais : ",
+    "size" : "Taille : ",
+    "version" : "Version : ",
+    "value" : "Valeur : ",
+    "reward" : "Réconpense : ",
+    "nonce" : "Nonce : ",
+    "difficulty" : "Difficulté : ",
+    "previous" : "précédent : ",
+    "next" : "suivant : ",
+    "bits" : "Bits : ",
+    "txInfo" : "Résumé de la transaction"
 };
 
 

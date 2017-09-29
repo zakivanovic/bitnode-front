@@ -25,16 +25,16 @@ body {
   text-align: right;
 }
 
-#block {
+.info-container {
   font-size: 14px;
   max-width: 1140px;
 }
 
-#block div.right {
-  font-size: 12px;
+.info-container div.right {
+  font-size: 13px;
 }
 
-#block span.badge {
+.info-container span.badge {
   font-weight: inherit;
 }
 
@@ -42,3 +42,7 @@ body {
   border-top: 1px solid lightgray;
   padding: 10px 0px;
 }
+
+.toast-top-full-width {  
+  top: 56px;
+} 

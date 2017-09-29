@@ -76,7 +76,6 @@ function Formater() {
 
     this.coinbase = function(data) {
         var parts = data.split('/');
-        var coinbase = parts[1] ? parts[1] : data;
-        return '<span class="badge badge-info">'+coinbase+'</span>';
+        return '<span class="badge badge-info">'+parts[1]+'</span>';
     }
 }

@@ -18,12 +18,20 @@ $(document).ready(function ()
             this.load('views/explorer.html').swap();
         });
 
-        /* Block route */
+        /* Explorer > Block route */
         this.get('#/explorer/block/:id', function(data) {
             routeParams = data.params;
             resetIntervals(intervals);
             loadLayout('explorer');
             this.load('views/block.html').swap();
+        });
+
+        /* Explorer > Transaction route */
+        this.get('#/explorer/tx/:id', function(data) {
+            routeParams = data.params;
+            resetIntervals(intervals);
+            loadLayout('explorer');
+            this.load('views/tx.html').swap();
         });
 
         /* Wallet route */
