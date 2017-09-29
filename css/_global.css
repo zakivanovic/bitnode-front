@@ -25,6 +25,14 @@ body {
   text-align: right;
 }
 
+.no-padding {
+  padding: 0px;
+}
+
+.margin-20 {
+  margin: 20px;
+}
+
 .info-container {
   font-size: 14px;
   max-width: 1140px;
@@ -45,4 +53,13 @@ body {
 
 .toast-top-full-width {  
   top: 56px;
-} 
+}
+
+#chain .row.card-content {
+  padding : 10px 35px;
+  line-height: 33px;
+}
+
+#chain .row.card-content .col-1 {
+  text-align: center;
+}

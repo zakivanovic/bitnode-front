@@ -60,9 +60,12 @@ function TxFormater() {
      * coinbase formater
      */
     this.coinbase = function(data) {
-        var parts = data.split('/');
-        var coinbase = parts[1] ? parts[1] : data;
-        return '<span class="badge badge-info">'+coinbase+'</span>';
+        if(typeof(data) === 'string') {
+            var parts = data.split('/');
+            var coinbase = parts[1] ? parts[1] : data;
+            return '<span class="badge badge-info">'+coinbase+'</span>';
+        }
+        return '-';
     }
     /**
      * time formater
@@ -82,13 +85,26 @@ function TxFormater() {
 
     this.inputs = function(data) {
         data.forEach(function(element) {
-            $('#tx-inputs').append('<div class="row">'+element.addr+'</div>');
+            if(element.addr) {
+                $('#tx-inputs').append('<div class="row"><a href="#/explorer/addr/'+element.addr+'">'+element.addr+'</a></div>');
+            } else {
+                $('#tx-inputs').append('<div class="row">'+this.coinbase(element.coinbase)+'</div>');
+            }
         }, this);
     }
 
     this.outputs = function(data) {
+        var total = 0;
         data.forEach(function(element) {
-            $('#tx-outputs').append('<div class="row"><div class="col-8 right">'+element.addr+'</div><div class="col-4 left">'+element.value+' BTC</div></div>');
+            if(element.addr) {
+                $('#tx-outputs').append(
+                '<div class="row">\
+                    <div class="col-8 left"><a href="#/explorer/addr/'+element.addr+'">'+element.addr+'</a></div>\
+                    <div class="col-4 right">'+element.value+'</div>\
+                </div>');
+                total += element.value;
+            }
         }, this);
+        $('#tx-total').html(total + ' <span class="text-muted">BTC</span>');
     }
 }

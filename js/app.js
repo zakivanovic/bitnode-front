@@ -34,6 +34,14 @@ $(document).ready(function ()
             this.load('views/tx.html').swap();
         });
 
+        /* Explorer > Address route */
+        this.get('#/explorer/addr/:id', function(data) {
+            routeParams = data.params;
+            resetIntervals(intervals);
+            loadLayout('explorer');
+            this.load('views/addr.html').swap();
+        });
+
         /* Wallet route */
         this.get('#/wallet', function() {
             resetIntervals(intervals);

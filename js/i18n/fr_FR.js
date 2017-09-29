@@ -61,6 +61,7 @@ const translations = {
     "hash" : "Hash : ",
     "lastBlocks" : "Derniers blocks",
     "blockInfo" : "Résumé du block",
+    "addrInfo" : "Résumé de l'adresse",
     "tx" : "Transactions",
     "tx-count" : "Nbr. transactions : ",
     "time" : "Heure : ",
@@ -76,7 +77,9 @@ const translations = {
     "previous" : "précédent : ",
     "next" : "suivant : ",
     "bits" : "Bits : ",
-    "txInfo" : "Résumé de la transaction"
+    "txInfo" : "Résumé de la transaction",
+    "addr" : "Adresse : ",
+    "balance" : "Solde : "
 };
 
 

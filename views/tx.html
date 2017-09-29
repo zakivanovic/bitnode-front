@@ -1,9 +1,9 @@
 
 <div class="row breadcrumb">
-    <a href="#/explorer">Explorer</a> &nbsp; / &nbsp;<span id="tx-block"></span>&nbsp; / &nbsp;<span id="tx-hash"></span>
+    <a href="#/explorer">Explorer</a> &nbsp; / &nbsp;<span id="tx-block"></span>&nbsp; / Transaction &nbsp;<span id="tx-hash"></span>
 </div>
-<h1 id="title" class="my-4"></h1>
 <div class="card card-outline-warning">
+    <div class="card-header"><h5 id="title"></h5></div>
     <div id="tx" class="card-body row info-container">
         <div class="col">
             <div class="row">
@@ -42,13 +42,14 @@
 </div>
 
 <h2 id="tx-title" class="my-4"></h2>
-
 <div id="chain" class="card card-outline-warning">
-    <div class="row">
-        <div id="tx-inputs" class="col-5"></div>
-        <div class="col-1">--></div>
-        <div id="tx-outputs" class="col-6"></div>
+    <div id="tx-total" class="card-header right"></div>
+    <div class="row card-content">
+        <div id="tx-inputs" class="col-4"></div>
+        <div class="col-1"><i class="fa fa-arrow-right fa-2x"></i></div>
+        <div id="tx-outputs" class="col-7"></div>
     </div>
 </div>
+<br><br>
 
 <script src="js/tx.js"></script>
