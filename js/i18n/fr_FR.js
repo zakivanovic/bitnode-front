@@ -79,7 +79,8 @@ const translations = {
     "bits" : "Bits : ",
     "txInfo" : "Résumé de la transaction",
     "addr" : "Adresse : ",
-    "balance" : "Solde : "
+    "balance" : "Solde : ",
+    "wallet" : "Porte-monnaie"
 };
 
 

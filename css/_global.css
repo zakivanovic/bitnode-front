@@ -9,6 +9,22 @@ body {
   }
 }
 
+@font-face {
+  font-family: 'bitcoinregular';
+  src: url('../assets/fonts/bitcoin-webfont.eot');
+  src: url('../assets/fonts/bitcoin-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/bitcoin-webfont.woff2') format('woff2'),
+       url('../assets/fonts/bitcoin-webfont.woff') format('woff'),
+       url('../assets/fonts/bitcoin-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+.hidden {
+  display: none;
+}
+
 .portfolio-item {
   margin-bottom: 30px;
 }
@@ -62,4 +78,8 @@ body {
 
 #chain .row.card-content .col-1 {
   text-align: center;
+}
+
+#balance {
+  font-family: bitcoinregular, arial, sans-serif;
 }
