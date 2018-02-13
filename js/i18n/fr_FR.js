@@ -80,7 +80,19 @@ const translations = {
     "txInfo" : "Résumé de la transaction",
     "addr" : "Adresse : ",
     "balance" : "Solde : ",
-    "wallet" : "Porte-monnaie"
+    "wallet" : "Porte-monnaie",
+    "confirm" : "confirmations",
+    "send-btn" : "Envoyer", 
+    "receive-btn" : "Recevoir", 
+    "address-lbl" : "Adresse : ", 
+    "amount-lbl" : "Montant (฿) : ",
+    "receive-amount-lbl" : "Montant (฿) : ", 
+    "fees-lbl" : "Frais (฿) : ", 
+    "label-lbl" : "Etiquette : ", 
+    "send-validate-btn" : "Valider", 
+    "receive-validate-btn" : "Valider",
+    "receive-label-lbl" : "Etiquette : ",
+    "message-lbl" : "Message : "
 };
 
 

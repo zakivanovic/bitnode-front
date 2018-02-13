@@ -41,6 +41,10 @@ body {
   text-align: right;
 }
 
+.center {
+  text-align: center;
+}
+
 .no-padding {
   padding: 0px;
 }
@@ -82,4 +86,27 @@ body {
 
 #balance {
   font-family: bitcoinregular, arial, sans-serif;
+}
+
+.sm-grey {
+  color: #9c9b9b;
+  font-size: 14px;
+}
+
+.sent {
+  color: red;
+}
+
+.received {
+  color: green;
+}
+
+#wlt-tx .btn-sm {
+  padding: 0;
+  line-height: 0.9;
+}
+
+.wallet-form form {
+  padding-left: 0;
+  padding-right: 0;
 }

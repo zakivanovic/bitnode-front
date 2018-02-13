@@ -4,14 +4,14 @@ $(document).ready(function () {
     intervals.push(setInterval(fetchNodeData, 10000)); // refreshes data every 10 seconds
 });
 
-const viewPartial = {
+var viewPartial = {
     'node' : ["versions.node", "versions.protocol", "versions.wallet", "versions.userAgent", "errors", "mempool.size", "mempool.usage", "mempool.max", "mempool.fee", "disk.path","memory.used", "memory.free", "memory.total", "uptime"],
     'network' : ["connections", "difficulty", "proxy", "hashrate", "network", "block", "medianTime",  "pruned"],
     'system' : ["sys.hostname", "sys.cpus", "sys.uptime", "sys.os.platform", "sys.os.arch", "sys.os.release"],
     'sync' : ["verificationProgress","height", "timeOffset"],
 };
 
-const progressBars = []
+var progressBars = []
 
 var tab = [];
 
